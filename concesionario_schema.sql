@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS inspeccion (
     inspeccion_id       INT NOT NULL AUTO_INCREMENT,
     consultor_id        INT NOT NULL,
     vehiculo_id         INT NOT NULL,
-    fecha               DATE,
+    fecha               DATETIME,
     pagado              BOOLEAN DEFAULT FALSE,
     PRIMARY KEY (inspeccion_id),
     FOREIGN KEY (consultor_id) REFERENCES consultor(consultor_id),

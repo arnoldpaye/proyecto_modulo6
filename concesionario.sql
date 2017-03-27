@@ -117,14 +117,14 @@ CREATE TABLE `inspeccion` (
   `inspeccion_id` int(11) NOT NULL AUTO_INCREMENT,
   `consultor_id` int(11) NOT NULL,
   `vehiculo_id` int(11) NOT NULL,
-  `fecha` date DEFAULT NULL,
+  `fecha` datetime DEFAULT NULL,
   `pagado` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`inspeccion_id`),
   KEY `consultor_id` (`consultor_id`),
   KEY `vehiculo_id` (`vehiculo_id`),
   CONSTRAINT `inspeccion_ibfk_1` FOREIGN KEY (`consultor_id`) REFERENCES `consultor` (`consultor_id`),
   CONSTRAINT `inspeccion_ibfk_2` FOREIGN KEY (`vehiculo_id`) REFERENCES `vehiculo` (`vehiculo_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -133,6 +133,7 @@ CREATE TABLE `inspeccion` (
 
 LOCK TABLES `inspeccion` WRITE;
 /*!40000 ALTER TABLE `inspeccion` DISABLE KEYS */;
+INSERT INTO `inspeccion` VALUES (1,1,3,'2017-03-02 08:30:00',1),(2,1,5,'2017-03-20 14:00:00',0);
 /*!40000 ALTER TABLE `inspeccion` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -152,7 +153,7 @@ CREATE TABLE `inspeccion_servicio` (
   KEY `servicio_id` (`servicio_id`),
   CONSTRAINT `inspeccion_servicio_ibfk_1` FOREIGN KEY (`inspeccion_id`) REFERENCES `inspeccion` (`inspeccion_id`),
   CONSTRAINT `inspeccion_servicio_ibfk_2` FOREIGN KEY (`servicio_id`) REFERENCES `servicio` (`servicio_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -161,6 +162,7 @@ CREATE TABLE `inspeccion_servicio` (
 
 LOCK TABLES `inspeccion_servicio` WRITE;
 /*!40000 ALTER TABLE `inspeccion_servicio` DISABLE KEYS */;
+INSERT INTO `inspeccion_servicio` VALUES (1,1,1),(2,1,3),(3,1,6),(4,2,1),(5,2,2);
 /*!40000 ALTER TABLE `inspeccion_servicio` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -230,4 +232,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-27  9:05:14
+-- Dump completed on 2017-03-27  9:11:36
