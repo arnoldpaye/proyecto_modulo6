@@ -16,6 +16,14 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Current Database: `concesionario`
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `concesionario` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `concesionario`;
+
+--
 -- Table structure for table `cliente`
 --
 
@@ -220,4 +228,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-27  8:35:34
+-- Dump completed on 2017-03-27  8:46:43
