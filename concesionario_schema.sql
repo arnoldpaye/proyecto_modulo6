@@ -64,11 +64,10 @@ CREATE TABLE IF NOT EXISTS inspeccion (
 
 CREATE TABLE IF NOT EXISTS inspeccion_servicio (
     inspeccion_servicio_id  INT NOT NULL AUTO_INCREMENT,
-    inspeccio_id            INT NOT NULL,
+    inspeccion_id            INT NOT NULL,
     servicio_id             INT NOT NULL,
     PRIMARY KEY (inspeccion_servicio_id),
-    FOREIGN KEY (inspeccion_id) REFERENCES reserva(reserva_id),
+    FOREIGN KEY (inspeccion_id) REFERENCES inspeccion(inspeccion_id),
     FOREIGN KEY (servicio_id) REFERENCES servicio(servicio_id)
-
 ) ENGINE=INNODB;
 
