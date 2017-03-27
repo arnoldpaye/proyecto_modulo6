@@ -177,7 +177,7 @@ CREATE TABLE `servicio` (
   `duracion` int(11) DEFAULT '0',
   `precio` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`servicio_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -186,6 +186,7 @@ CREATE TABLE `servicio` (
 
 LOCK TABLES `servicio` WRITE;
 /*!40000 ALTER TABLE `servicio` DISABLE KEYS */;
+INSERT INTO `servicio` VALUES (1,'Diagnostico de luces ABS',60,690.00),(2,'Diagnostico del sistema de frenos',60,600.00),(3,'Balanceo de ruedas (4 ruedas)',120,300.00),(4,'Diagnostico de la luz del motor',50,400.00),(5,'Diagnostico del motor (ruidos, fugas, otros)',60,700.00),(6,'Diagnostico de la calefaccion o aire acondicionado',30,500.00);
 /*!40000 ALTER TABLE `servicio` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -207,7 +208,7 @@ CREATE TABLE `vehiculo` (
   PRIMARY KEY (`vehiculo_id`),
   KEY `cliente_id` (`cliente_id`),
   CONSTRAINT `vehiculo_ibfk_1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`cliente_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -216,6 +217,7 @@ CREATE TABLE `vehiculo` (
 
 LOCK TABLES `vehiculo` WRITE;
 /*!40000 ALTER TABLE `vehiculo` DISABLE KEYS */;
+INSERT INTO `vehiculo` VALUES (1,1,'MURANO','NISSAN',2006,500,'rojo'),(2,1,'JETTA','VOLKSWAGEN',2007,850,'azul'),(3,2,'MAXIMA','NISSAN',2009,1050,'negro'),(4,3,'FRONTIER','NISSAN',2003,2000,'azul'),(5,4,'SENTRA','NISSAN',2013,450,'negro'),(6,4,'300','CHRYSLER',2006,1030,'rojo'),(7,4,'ROGUE','NISSAN',2015,200,'verde'),(8,5,'ALTIMA','NISSAN',2015,250,'rojo'),(9,5,'COROLLA','TOYOTA',2012,720,'azul');
 /*!40000 ALTER TABLE `vehiculo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -228,4 +230,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-27  8:46:43
+-- Dump completed on 2017-03-27  9:05:14
