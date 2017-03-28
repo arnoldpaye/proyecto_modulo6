@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: concesionario
 -- ------------------------------------------------------
--- Server version	5.5.5-10.1.22-MariaDB
+-- Server version	5.7.17
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -93,7 +93,7 @@ CREATE TABLE `consultor` (
   PRIMARY KEY (`consultor_id`),
   KEY `concesionario_id` (`concesionario_id`),
   CONSTRAINT `consultor_ibfk_1` FOREIGN KEY (`concesionario_id`) REFERENCES `concesionario` (`concesionario_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -102,7 +102,7 @@ CREATE TABLE `consultor` (
 
 LOCK TABLES `consultor` WRITE;
 /*!40000 ALTER TABLE `consultor` DISABLE KEYS */;
-INSERT INTO `consultor` VALUES (1,1,'Arnold','Paye','apaye','123'),(2,1,'Mauricio','Rojas','mrojas','123'),(3,2,'Juan','Perez','jperez','123');
+INSERT INTO `consultor` VALUES (1,1,'Arnold','Paye','apaye','123'),(2,1,'Mauricio','Rojas','mrojas','123'),(3,2,'Juan','Perez','jperez','123'),(4,3,'Raul','Gutierrez','rgutierrez','123');
 /*!40000 ALTER TABLE `consultor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -124,7 +124,7 @@ CREATE TABLE `inspeccion` (
   KEY `vehiculo_id` (`vehiculo_id`),
   CONSTRAINT `inspeccion_ibfk_1` FOREIGN KEY (`consultor_id`) REFERENCES `consultor` (`consultor_id`),
   CONSTRAINT `inspeccion_ibfk_2` FOREIGN KEY (`vehiculo_id`) REFERENCES `vehiculo` (`vehiculo_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -133,7 +133,7 @@ CREATE TABLE `inspeccion` (
 
 LOCK TABLES `inspeccion` WRITE;
 /*!40000 ALTER TABLE `inspeccion` DISABLE KEYS */;
-INSERT INTO `inspeccion` VALUES (1,1,3,'2017-03-02 08:30:00',1),(2,1,5,'2017-03-20 14:00:00',0);
+INSERT INTO `inspeccion` VALUES (1,1,3,'2017-03-02 08:30:00',1),(2,1,5,'2017-03-20 14:00:00',0),(3,2,6,'2017-03-20 17:00:00',1),(4,3,4,'2017-03-21 10:00:00',0),(5,3,6,'2017-03-24 13:00:00',0),(6,4,9,'2017-03-27 09:30:00',0);
 /*!40000 ALTER TABLE `inspeccion` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -232,4 +232,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-27  9:11:36
+-- Dump completed on 2017-03-28  7:55:22
