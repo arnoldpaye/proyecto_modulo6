@@ -210,7 +210,7 @@ CREATE TABLE `vehiculo` (
   PRIMARY KEY (`vehiculo_id`),
   KEY `cliente_id` (`cliente_id`),
   CONSTRAINT `vehiculo_ibfk_1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`cliente_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -219,7 +219,7 @@ CREATE TABLE `vehiculo` (
 
 LOCK TABLES `vehiculo` WRITE;
 /*!40000 ALTER TABLE `vehiculo` DISABLE KEYS */;
-INSERT INTO `vehiculo` VALUES (1,1,'MURANO','NISSAN',2006,500,'rojo'),(2,1,'JETTA','VOLKSWAGEN',2007,850,'azul'),(3,2,'MAXIMA','NISSAN',2009,1050,'negro'),(4,3,'FRONTIER','NISSAN',2003,2000,'azul'),(5,4,'SENTRA','NISSAN',2013,450,'negro'),(6,4,'300','CHRYSLER',2006,1030,'rojo'),(7,4,'ROGUE','NISSAN',2015,200,'verde'),(8,5,'ALTIMA','NISSAN',2015,250,'rojo'),(9,5,'COROLLA','TOYOTA',2012,720,'azul');
+INSERT INTO `vehiculo` VALUES (1,1,'MURANO','NISSAN',2006,500,'rojo'),(2,1,'JETTA','VOLKSWAGEN',2007,850,'azul'),(3,2,'MAXIMA','NISSAN',2009,1050,'negro'),(4,3,'FRONTIER','NISSAN',2003,2000,'azul'),(5,4,'SENTRA','NISSAN',2013,450,'negro'),(6,4,'300','CHRYSLER',2006,1030,'rojo'),(7,4,'ROGUE','NISSAN',2015,200,'verde'),(8,5,'ALTIMA','NISSAN',2015,250,'rojo'),(9,5,'COROLLA','TOYOTA',2012,720,'azul'),(10,1,'CAMRY','TOYOTA',2011,1200,'verde'),(11,2,'BEETLE','VOLKSWAGEN',2013,820,'rojo');
 /*!40000 ALTER TABLE `vehiculo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -232,4 +232,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-28  7:55:22
+-- Dump completed on 2017-03-28  8:07:59
