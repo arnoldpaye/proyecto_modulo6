@@ -153,7 +153,7 @@ CREATE TABLE `inspeccion_servicio` (
   KEY `servicio_id` (`servicio_id`),
   CONSTRAINT `inspeccion_servicio_ibfk_1` FOREIGN KEY (`inspeccion_id`) REFERENCES `inspeccion` (`inspeccion_id`),
   CONSTRAINT `inspeccion_servicio_ibfk_2` FOREIGN KEY (`servicio_id`) REFERENCES `servicio` (`servicio_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -162,7 +162,7 @@ CREATE TABLE `inspeccion_servicio` (
 
 LOCK TABLES `inspeccion_servicio` WRITE;
 /*!40000 ALTER TABLE `inspeccion_servicio` DISABLE KEYS */;
-INSERT INTO `inspeccion_servicio` VALUES (1,1,1),(2,1,3),(3,1,6),(4,2,1),(5,2,2);
+INSERT INTO `inspeccion_servicio` VALUES (1,1,1),(2,1,3),(3,1,6),(4,2,1),(5,2,2),(6,3,1),(7,3,3),(8,4,1),(9,4,2),(10,4,3),(11,4,4),(12,5,1),(13,5,6),(14,6,1),(15,6,6),(16,7,1),(17,7,2),(18,8,2),(19,8,3),(20,8,5),(21,9,1),(22,9,2),(23,9,3),(24,9,4);
 /*!40000 ALTER TABLE `inspeccion_servicio` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -232,4 +232,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-28  8:20:54
+-- Dump completed on 2017-03-28  8:32:44
